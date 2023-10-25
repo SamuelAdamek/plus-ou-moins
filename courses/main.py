@@ -7,41 +7,34 @@ while difficulter != "Facile" and difficulter != "Moyen" and difficulter != "Dif
     print("\nErreur la difficulter n'est pas trouver. \nVeuillez choisir une difficulter valide.\n\n")
     difficulter = input("Veuillez choisir votre difficulté : ")
 print("Bon jeu !\n")
-usernumber = 0
+numeroutilisateur = 0
+
 if difficulter == "Facile" :
     nombre_a_trouver = random.randint(1, 10)
-    while nombre_a_trouver != usernumber :
+    while nombre_a_trouver != numeroutilisateur :
         try: 
-            usernumber = int(input("Entrer un nombre : "))
-            if nombre_a_trouver < usernumber :
+            numeroutilisateur = int(input("Entrer un nombre : "))
+            if nombre_a_trouver < numeroutilisateur :
                 print("\nLe nombre a trouver est plus petit\n")
             else :
                 print("\nLe nombre a trouver est plus grand\n")
             nbressaie = nbressaie + 1
         except ValueError:
             print("Erreur ! Vous devez entrer un nombre Valide.")
-        # while not isinstance(usernumber, int):
-        #     usernumber = input("Erreur, Veuillez entrer un nombre.\nEntrez un nombre : ")
-        # while usernumber < 0 or usernumber > 11 :
-        #     print("\nErreur, Veuillez entrer un nombre valide.\n")
-    print (f'Bravo, vous avez trouvez en {nbressaie} essaie ')
-elif difficulter == "Normal" :
+
+elif difficulter == "Moyen" :
     nombre_a_trouver = random.randint(1, 100)
-    while nombre_a_trouver != usernumber :
+    while nombre_a_trouver != numeroutilisateur :
         try: 
-            usernumber = int(input("Entrer un nombre : "))
-            if nombre_a_trouver < usernumber :
+            numeroutilisateur = int(input("Entrer un nombre : "))
+            if nombre_a_trouver < numeroutilisateur :
                 print("\nLe nombre a trouver est plus petit\n")
             else :
                 print("\nLe nombre a trouver est plus grand\n")
             nbressaie = nbressaie + 1
         except ValueError:
             print("Erreur ! Vous devez entrer un nombre Valide.")
-        # while not isinstance(usernumber, int):
-        #     usernumber = input("Erreur, Veuillez entrer un nombre.\nEntrez un nombre : ")
-        # while usernumber < 0 or usernumber > 11 :
-        #     print("\nErreur, Veuillez entrer un nombre valide.\n")
-    print (f'Bravo, vous avez trouvez en {nbressaie} essaie ')
+
 elif difficulter == "Difficile" :
     nombre_a_trouver = random.randint(1, 1000)
     while nombre_a_trouver != usernumber :
@@ -54,8 +47,5 @@ elif difficulter == "Difficile" :
             nbressaie = nbressaie + 1
         except ValueError:
             print("Erreur ! Vous devez entrer un nombre Valide.")
-        # while not isinstance(usernumber, int):
-        #     usernumber = input("Erreur, Veuillez entrer un nombre.\nEntrez un nombre : ")
-        # while usernumber < 0 or usernumber > 11 :
-        #     print("\nErreur, Veuillez entrer un nombre valide.\n")
-    print (f'Bravo, vous avez trouvez en {nbressaie} essaie ')
+
+print (f'Bravo, vous avez trouvez en {nbressaie} essaie ')
