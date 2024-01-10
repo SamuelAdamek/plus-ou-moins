@@ -13,4 +13,4 @@ marks = [7 , 15.5 , 5.5 , 11 , 14 , 9 , 10 , 11.5 , 14 , 7 , 19]
 marks_above_avg_percentage = aboved(marks)
 #marks_above_avg_percentage = 0
 print(marks_above_avg_percentage)
-print('hello')
+#print('hello')
